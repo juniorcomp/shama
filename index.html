@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shama App - Verbumxpress</title>
+    <style>
+        :root {
+            --primary: #4A148C; 
+            --accent: #FFC107; 
+            --bg-page: #230b41; 
+            --text-light: #ffffff;
+            --text-dark: #212529;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-light);
+            background-color: var(--bg-page);
+        }
+        header {
+            background: linear-gradient(135deg, #311b92, #7c43bd); 
+            color: var(--accent);
+            padding: 3rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        header h1 { margin: 0; font-size: 3rem; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        header p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; color: white; }
+        
+        .container {
+            max-width: 900px;
+            margin: -30px auto 2rem;
+            padding: 0 1rem;
+            position: relative;
+        }
+        
+        .card {
+            background: var(--primary);
+            padding: 2rem;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        h2 { 
+            color: var(--accent); 
+            margin-top: 0; 
+            border-bottom: 2px solid rgba(255, 193, 7, 0.3); 
+            display: inline-block; 
+            padding-bottom: 5px; 
+        }
+
+        h3 { color: #e0e0e0; }
+        
+        /* Caixa de Doação */
+        .donation-box {
+            background: rgba(255, 255, 255, 0.1); 
+            border: 2px dashed var(--accent);
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+        .pix-key {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--primary); 
+            background: var(--accent);
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* Estilo das Políticas (Retrátil) */
+        details {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        summary {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--primary);
+            outline: none;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        summary:hover { background: #ffffff; }
+        summary::after { content: '+'; font-size: 1.5rem; color: var(--primary); }
+        details[open] summary::after { content: '-'; }
+        
+        .policy-content {
+            padding: 20px;
+            font-size: 0.95rem;
+            color: #e0e0e0; 
+            max-height: 400px;
+            overflow-y: auto;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        a { color: var(--accent); text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; color: #fff; }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SHAMA</h1>
+        <p>Desenvolvido por <strong>Verbumxpress</strong></p>
+    </header>
+
+    <div class="container">
+        
+        <div class="card">
+            <h2>Sobre o App</h2>
+            <p>O <strong>Shama</strong> é o seu companheiro diário de fé. Projetado para manter a chama acesa através da leitura bíblica, devocionais e gamificação cristã. Nosso objetivo é transformar o hábito de leitura da Bíblia em algo dinâmico e constante.</p>
+        </div>
+
+        <div class="card">
+            <h2>Apoie o Projeto</h2>
+            <p>O Shama é desenvolvido de forma independente e disponibilizado gratuitamente. Se este aplicativo tem abençoado sua vida, considere fazer uma oferta voluntária para ajudar nos custos de servidor e desenvolvimento.</p>
+            
+            <p style="background: rgba(255, 193, 7, 0.2); padding: 10px; border-radius: 5px; font-size: 0.9rem; border-left: 4px solid var(--accent);">
+                <strong>💡 Dica:</strong> Para identificarmos sua doação, se possível, faça o PIX com o final <strong>,33</strong> (centavos).
+            </p>
+            
+            <div class="donation-box">
+                <span style="color: #fff;">Chave PIX (E-mail ou CPF):</span><br>
+                <span class="pix-key">verbumxpressart@gmail.com</span>
+                <p><small>(Confirme o banco antes de enviar)</small></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Políticas e Termos</h2>
+            <p>Para transparência total, disponibilizamos nossa Política de Privacidade e Termos de Uso em Português e Inglês.</p>
+
+            <h3 style="margin-top: 20px; color: rgba(255,255,255,0.7);">Política de Privacidade</h3>
+            
+            <details open>
+                <summary>Política de Privacidade (Português)</summary>
+                <div class="policy-content">
+                    <strong>Política de Privacidade</strong>
+                    <p>Esta política de privacidade aplica-se ao aplicativo Shama (doravante referido como "Aplicativo") para dispositivos móveis, criado por Verbumxpress (doravante referido como "Provedor de Serviço") como um serviço Gratuito.</p>
+                    
+                    <strong>Coleta e Uso de Informações</strong>
+                    <p>O Aplicativo coleta informações quando você o baixa e utiliza. Essas informações podem incluir dados como:</p>
+                    <ul>
+                        <li>Endereço de Protocolo de Internet do seu dispositivo (ex: endereço IP)</li>
+                        <li>As páginas do Aplicativo que você visita, a hora e data da visita</li>
+                        <li>O sistema operacional que você usa no seu dispositivo móvel</li>
+                    </ul>
+                    <p>O Aplicativo não coleta informações precisas sobre a localização do seu dispositivo móvel.</p>
+                    
+                    <strong>Acesso de Terceiros</strong>
+                    <p>O Aplicativo utiliza serviços de terceiros que possuem suas próprias Políticas de Privacidade:</p>
+                    <ul>
+                        <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
+                    </ul>
+
+                    <strong>Contato</strong>
+                    <p>Se tiver dúvidas sobre privacidade, contate-nos: verbumxpressart@gmail.com</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Privacy Policy (English - Original)</summary>
+                <div class="policy-content">
+                    <strong>Privacy Policy</strong><p>This privacy policy applies to the Shama app (hereby referred to as "Application") for mobile devices that was created by Verbumxpress (hereby referred to as "Service Provider") as a Free service. This service is intended for use "AS IS".</p><br><strong>Information Collection and Use</strong><p>The Application collects information when you download and use it. This information may include information such as </p><ul><li>Your device's Internet Protocol address (e.g. IP address)</li><li>The pages of the Application that you visit, the time and date of your visit, the time spent on those pages</li><li>The time spent on the Application</li><li>The operating system you use on your mobile device</li></ul><p></p><br><p>The Application does not gather precise information about the location of your mobile device.</p><br><p>Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:</p><ul><li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Google Play Services</a></li></ul><br><strong>Contact Us</strong><p>If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at verbumxpressart@gmail.com.</p>
+                </div>
+            </details>
+
+            <h3 style="margin-top: 30px; color: rgba(255,255,255,0.7);">Termos e Condições</h3>
+
+            <details>
+                <summary>Termos e Condições (Português)</summary>
+                <div class="policy-content">
+                    <strong>Termos e Condições</strong>
+                    <p>Estes termos e condições aplicam-se ao aplicativo Shama (doravante referido como "Aplicativo") para dispositivos móveis, criado por Verbumxpress (doravante referido como "Provedor de Serviço") como um serviço Gratuito.</p>
+                    
+                    <p>Ao baixar ou utilizar o Aplicativo, você concorda automaticamente com os seguintes termos. É altamente recomendável que você leia e entenda esses termos antes de usar o Aplicativo.</p>
+                    
+                    <strong>Propriedade Intelectual</strong>
+                    <p>A cópia não autorizada, modificação do Aplicativo, de qualquer parte do Aplicativo ou de nossas marcas registradas é estritamente proibida. Tentativas de extrair o código-fonte, traduzir o Aplicativo ou criar versões derivadas não são permitidas. Todas as marcas registradas e direitos autorais permanecem propriedade do Provedor de Serviço.</p>
+                    
+                    <strong>Segurança e Uso</strong>
+                    <p>É sua responsabilidade manter a segurança do seu telefone e o acesso ao Aplicativo. O Provedor de Serviço aconselha fortemente contra o "jailbreak" ou "root" do seu telefone, o que pode expor seu dispositivo a malwares e comprometer a segurança, podendo fazer com que o Aplicativo não funcione corretamente.</p>
+                    
+                    <strong>Conectividade</strong>
+                    <p>Algumas funções do Aplicativo requerem uma conexão ativa com a internet. O Provedor de Serviço não pode ser responsabilizado se o Aplicativo não funcionar com capacidade total devido à falta de acesso Wi-Fi ou se você esgotar sua franquia de dados.</p>
+                    
+                    <strong>Atualizações</strong>
+                    <p>O Provedor de Serviço pode desejar atualizar o aplicativo em algum momento. Você precisará baixar as atualizações se quiser continuar usando o aplicativo. O Provedor de Serviço também pode encerrar o uso a qualquer momento sem aviso prévio.</p>
+                    
+                    <p>Estes termos são efetivos a partir de 01-02-2026.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Terms & Conditions (English - Original)</summary>
+                <div class="policy-content">
+                    <strong>Terms &amp; Conditions</strong><br><p>These terms and conditions apply to the Shama app (hereby referred to as "Application") for mobile devices that was created by Verbumxpress (hereby referred to as "Service Provider") as a Free service.</p><br><p>Upon downloading or utilizing the Application, you are automatically agreeing to the following terms. It is strongly advised that you thoroughly read and understand these terms prior to using the Application.</p><br><p>Unauthorized copying, modification of the Application, any part of the Application, or our trademarks is strictly prohibited. Any attempts to extract the source code of the Application, translate the Application into other languages, or create derivative versions are not permitted. All trademarks, copyrights, database rights, and other intellectual property rights related to the Application remain the property of the Service Provider.</p><br><p>The Service Provider is dedicated to ensuring that the Application is as beneficial and efficient as possible. As such, they reserve the right to modify the Application or charge for their services at any time and for any reason. The Service Provider assures you that any charges for the Application or its services will be clearly communicated to you.</p><br><p>The Application stores and processes personal data that you have provided to the Service Provider in order to provide the Service. It is your responsibility to maintain the security of your phone and access to the Application. The Service Provider strongly advise against jailbreaking or rooting your phone, which involves removing software restrictions and limitations imposed by the official operating system of your device. Such actions could expose your phone to malware, viruses, malicious programs, compromise your phone's security features, and may result in the Application not functioning correctly or at all.</p><div><p>Please note that the Application utilizes third-party services that have their own Terms and Conditions. Below are the links to the Terms and Conditions of the third-party service providers used by the Application:</p><ul><li><a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Google Play Services</a></li></ul></div><br><p>Please be aware that the Service Provider does not assume responsibility for certain aspects. Some functions of the Application require an active internet connection, which can be Wi-Fi or provided by your mobile network provider. The Service Provider cannot be held responsible if the Application does not function at full capacity due to lack of access to Wi-Fi or if you have exhausted your data allowance.</p><br><p>If you are using the application outside of a Wi-Fi area, please be aware that your mobile network provider's agreement terms still apply. Consequently, you may incur charges from your mobile provider for data usage during the connection to the application, or other third-party charges. By using the application, you accept responsibility for any such charges, including roaming data charges if you use the application outside of your home territory (i.e., region or country) without disabling data roaming. If you are not the bill payer for the device on which you are using the application, they assume that you have obtained permission from the bill payer.</p><br><p>Similarly, the Service Provider cannot always assume responsibility for your usage of the application. For instance, it is your responsibility to ensure that your device remains charged. If your device runs out of battery and you are unable to access the Service, the Service Provider cannot be held responsible.</p><br><p>In terms of the Service Provider's responsibility for your use of the application, it is important to note that while they strive to ensure that it is updated and accurate at all times, they do rely on third parties to provide information to them so that they can make it available to you. The Service Provider accepts no liability for any loss, direct or indirect, that you experience as a result of relying entirely on this functionality of the application.</p><br><p>The Service Provider may wish to update the application at some point. The application is currently available as per the requirements for the operating system (and for any additional systems they decide to extend the availability of the application to) may change, and you will need to download the updates if you want to continue using the application. The Service Provider does not guarantee that it will always update the application so that it is relevant to you and/or compatible with the particular operating system version installed on your device. However, you agree to always accept updates to the application when offered to you. The Service Provider may also wish to cease providing the application and may terminate its use at any time without providing termination notice to you. Unless they inform you otherwise, upon any termination, (a) the rights and licenses granted to you in these terms will end; (b) you must cease using the application, and (if necessary) delete it from your device.</p><br><strong>Changes to These Terms and Conditions</strong><p>The Service Provider may periodically update their Terms and Conditions. Therefore, you are advised to review this page regularly for any changes. The Service Provider will notify you of any changes by posting the new Terms and Conditions on this page.</p><br><p>These terms and conditions are effective as of 2026-02-01</p><br><strong>Contact Us</strong><p>If you have any questions or suggestions about the Terms and Conditions, please do not hesitate to contact the Service Provider at verbumxpressart@gmail.com.</p>
+                </div>
+            </details>
+        </div>
+        
+        <div class="card" style="text-align: center;">
+            <h3>Dúvidas ou Sugestões?</h3>
+            <p>Fale conosco: <a href="mailto:verbumxpressart@gmail.com">verbumxpressart@gmail.com</a></p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Verbumxpress. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

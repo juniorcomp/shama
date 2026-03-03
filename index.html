@@ -154,6 +154,45 @@
         /* Scrollbar suave para as caixas de texto */
         .policy-content::-webkit-scrollbar { width: 6px; }
         .policy-content::-webkit-scrollbar-thumb { background-color: #ccc; border-radius: 3px; }
+        .botoes-shama {
+            display: flex;
+            gap: 15px; /* Espaço entre os botões */
+            flex-wrap: wrap; /* Quebra a linha em telas muito pequenas */
+        }
+
+        .btn-shama {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-family: 'Poppins', sans-serif, Arial;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn-shama:hover {
+            transform: translateY(-2px); /* Efeito de pular ao passar o mouse */
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        .btn-web {
+            background-color: #4A148C; /* Roxo da sua identidade visual */
+        }
+
+        .btn-play {
+            background-color: #000000; /* Preto clássico do Google Play */
+        }
+
+        /* Pequenos ícones (emojis) para dar um charme */
+        .btn-icone {
+            margin-right: 8px;
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
@@ -164,12 +203,24 @@
     </header>
 
     <div class="container">
-        
+        <div class="section-block">
+            <h2>Acesso</h2>
+            <p>O <strong>Shama</strong> está disponível para Android no Google Play Store. Além disso, o app tem uma versão web. Em breve nós iremos disponibilizar o app na Apple Store. Enquanto isso, o usuário de IOS pode acessar por meio do navegador o link abaixo.</p>
+            <div class="botoes-shama">
+            <a href="https://shamabible-afa9a.web.app" class="btn-shama btn-web" target="_blank" rel="noopener noreferrer">
+                <span class="btn-icone">🌐</span> Versão Web
+            </a>
+            
+            <a href="https://play.google.com/store/apps/details?id=com.verbumxpress.shama" class="btn-shama btn-play" target="_blank" rel="noopener noreferrer">
+                <span class="btn-icone">▶️</span> Google Play
+            </a>
+        </div>
+        </div>
         <div class="section-block">
             <h2>Sobre o App</h2>
             <p>O <strong>Shama</strong> é o seu companheiro diário de fé. Projetado para manter a chama acesa através da leitura bíblica, devocionais e gamificação cristã. Nosso objetivo é transformar o hábito de leitura da Bíblia em algo dinâmico e constante.</p>
         </div>
-
+        
         <div class="section-block">
             <h2>Apoie o Projeto</h2>
             <p>O Shama é desenvolvido de forma independente e disponibilizado gratuitamente. Se este aplicativo tem abençoado sua vida, considere fazer uma oferta voluntária para ajudar nos custos de servidor e desenvolvimento.</p>

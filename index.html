@@ -4,226 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shama App - Verbumxpress</title>
-    <style>
-        :root {
-            --primary: #4A148C; /* Roxo Shama */
-            --accent: #FFC107;  /* Amarelo Ouro */
-            --bg-page: #f5f5f7; /* Cinza estilo iOS/Android */
-            --card-bg: #ffffff; /* Branco puro */
-            --text-main: #1c1c1e; /* Preto suave */
-            --text-sec: #636366; /* Cinza para textos secundários */
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: var(--text-main);
-            background-color: var(--bg-page);
-        }
-        
-        /* Cabeçalho Limpo */
-        header {
-            background: var(--primary);
-            color: white;
-            padding: 3rem 1rem 4rem 1rem; /* Padding extra embaixo para o efeito de sobreposição */
-            text-align: center;
-        }
-        header h1 { margin: 0; font-size: 2.5rem; font-weight: 700; letter-spacing: 1px; }
-        header p { font-size: 1.1rem; opacity: 0.9; margin-top: 5px; color: rgba(255,255,255,0.8); }
-        
-        .container {
-            max-width: 800px;
-            margin: -40px auto 2rem; /* Sobe por cima do header */
-            padding: 0 1rem;
-            position: relative;
-        }
-        
-        /* Estilo "Bloco de App" em vez de Card Flutuante */
-        .section-block {
-            background: var(--card-bg);
-            padding: 2rem;
-            margin-bottom: 20px;
-            border-radius: 8px; /* Bordas sutis, padrão moderno */
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Sombra muito leve apenas para separar */
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-        
-        h2 { 
-            color: var(--primary); 
-            margin-top: 0; 
-            font-size: 1.5rem;
-            border-bottom: 1px solid #eee; 
-            padding-bottom: 10px; 
-            margin-bottom: 15px;
-        }
-
-        h3 { 
-            color: var(--text-sec); 
-            font-size: 1.1rem; 
-            text-transform: uppercase; 
-            letter-spacing: 0.5px;
-            margin-top: 30px;
-            font-weight: 600;
-        }
-        
-        p { color: #333; margin-bottom: 15px; }
-        
-        /* Caixa de Doação - Estilo "Alerta" */
-        .donation-box {
-            background: #fff8e1; /* Amarelo bem claro */
-            border-left: 4px solid var(--accent);
-            padding: 1.5rem;
-            border-radius: 4px;
-            margin-top: 1.5rem;
-        }
-        
-        .pix-key {
-            font-family: monospace;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: var(--primary);
-            background: rgba(255,255,255,0.5);
-            padding: 8px 12px;
-            border-radius: 4px;
-            display: inline-block;
-            margin: 10px 0;
-            border: 1px dashed #ccc;
-        }
-
-        /* Dica Visual */
-        .tip-box {
-            background-color: #e3f2fd; /* Azulzinho muito leve */
-            color: #0d47a1;
-            padding: 12px;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-
-        /* Estilo das Políticas (Retrátil) - Estilo Lista de Ajustes */
-        details {
-            background: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 6px;
-            margin-bottom: 10px;
-            overflow: hidden;
-        }
-        summary {
-            background: #fafafa;
-            padding: 15px;
-            cursor: pointer;
-            font-weight: 600;
-            color: #444;
-            outline: none;
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.2s;
-        }
-        summary:hover { background: #f0f0f0; }
-        summary::after { content: '+'; font-size: 1.2rem; color: var(--primary); font-weight: bold; }
-        details[open] summary::after { content: '−'; }
-        details[open] summary { border-bottom: 1px solid #eee; color: var(--primary); }
-        
-        .policy-content {
-            padding: 20px;
-            font-size: 0.9rem;
-            color: #555;
-            max-height: 400px;
-            overflow-y: auto;
-            background: #fff;
-            line-height: 1.7;
-        }
-        
-        /* Links */
-        a { color: var(--primary); text-decoration: none; font-weight: 600; }
-        a:hover { text-decoration: underline; }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-sec);
-            font-size: 0.85rem;
-        }
-
-        /* Scrollbar suave para as caixas de texto */
-        .policy-content::-webkit-scrollbar { width: 6px; }
-        .policy-content::-webkit-scrollbar-thumb { background-color: #ccc; border-radius: 3px; }
-        .botoes-shama {
-            display: flex;
-            gap: 15px; /* Espaço entre os botões */
-            flex-wrap: wrap; /* Quebra a linha em telas muito pequenas */
-        }
-
-        .btn-shama {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 24px;
-            border-radius: 12px;
-            font-family: 'Poppins', sans-serif, Arial;
-            font-size: 16px;
-            font-weight: bold;
-            text-decoration: none;
-            color: white;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .btn-shama:hover {
-            transform: translateY(-2px); /* Efeito de pular ao passar o mouse */
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-        }
-
-        .btn-web {
-            background-color: #4A148C; /* Roxo da sua identidade visual */
-        }
-
-        .btn-play {
-            background-color: #000000; /* Preto clássico do Google Play */
-        }
-
-        /* Pequenos ícones (emojis) para dar um charme */
-        .btn-icone {
-            margin-right: 8px;
-            font-size: 20px;
-        }
-    </style>
+    <!-- Ligação com o arquivo CSS separado -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Metatags Básicas de SEO e Compartilhamento (WhatsApp, Instagram, etc) -->
+    <meta property="og:title" content="Shama App - O seu companheiro diário de fé">
+    <meta property="og:description" content="Mantenha a chama acesa através da leitura bíblica estruturada, devocionais reflexivos e gamificação cristã. Baixe agora!">
+    <meta property="og:type" content="website">
+    <!-- Substitua o link abaixo pela URL real da imagem do logo do Shama quando tiver -->
+    <!-- <meta property="og:image" content="https://seusite.com/logo-shama.png"> -->
 </head>
 <body>
 
     <header>
+        <img src="logo_shama_transparent.png" alt="Logo Shama" class="logo-header">
         <h1>SHAMA</h1>
         <p>Desenvolvido por <strong>Verbumxpress</strong></p>
+        
+        <!-- Botões de acesso rápido no topo -->
+        <div class="botoes-shama">
+            <a href="https://shamabible-afa9a.web.app" class="btn-shama btn-web" target="_blank" rel="noopener noreferrer">
+                <span class="btn-icone">🌐</span> Acessar Web
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.verbumxpress.shama" class="btn-shama btn-play" target="_blank" rel="noopener noreferrer">
+                <span class="btn-icone">🔗</span> Google Play
+            </a>
+        </div>
+
+        <!-- Espaço para o Print do App -->
+        <div class="hero-mockup">
+            <!-- DICA: Salve um print bonito do app como app-mockup.png na pasta do site e descomente a linha abaixo -->
+            <!-- <img src="app-mockup.png" alt="Tela do aplicativo Shama"> -->
+        </div>
     </header>
 
     <div class="container">
+        
+        <!-- SEÇÃO ORIGINAL MANTIDA -->
         <div class="section-block">
-            <h2>Acesso</h2>
-            <p>O <strong>Shama</strong> está disponível para Android no Google Play Store. Além disso, o app tem uma versão web. Em breve nós iremos disponibilizar o app na Apple Store. Enquanto isso, o usuário de IOS pode acessar por meio do navegador o link abaixo.</p>
-            <div class="botoes-shama">
-            <a href="https://shamabible-afa9a.web.app" class="btn-shama btn-web" target="_blank" rel="noopener noreferrer">
-                <span class="btn-icone">🌐</span> Versão Web
-            </a>
+            <h2>Sobre o App e Funcionamento</h2>
+            <p>O <strong>Shama</strong> é o seu companheiro diário de fé. Projetado para ajudar você a manter a chama acesa através da leitura bíblica estruturada e devocionais reflexivos.</p>
+            <p><strong>Como funciona:</strong> O aplicativo oferece um calendário inteligente para rastrear o seu progresso diário, permitindo recuperar leituras passadas e registrar metas futuras. Através de um sistema de gamificação cristã, incentivamos a constância, tornando o hábito de leitura da Bíblia mais dinâmico e engajador.</p>
+            <p><strong>Propósito:</strong> É importante destacar que o Shama é um projeto <strong>100% sem fins lucrativos</strong>. Nossa missão exclusiva é fornecer ferramentas tecnológicas de alta qualidade para edificação espiritual, o avanço do Reino e o crescimento na Palavra.</p>
+        </div>
+
+        <!-- GRID VISUAL DE DESTAQUE -->
+        <div class="section-block">
+            <h2>Principais Funcionalidades</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>Leitura Ágil</h3>
+                    <p>Marque capítulos lidos instantaneamente com um toque longo. Acompanhe seu progresso sem burocracia.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Gamificação</h3>
+                    <p>Mantenha a chama acesa! Acompanhe seu histórico no calendário inteligente e construa constância.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔥</div>
+                    <h3>Devocionais</h3>
+                    <p>Reflexões diárias e automáticas para inspirar o seu dia. Conteúdo novo sempre à meia-noite.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Modos Premium</h3>
+                    <p>Ajuste o visual ao seu gosto. Explore nossos 4 temas exclusivos com tons claros e dark mode imersivo.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PERGUNTAS FREQUENTES -->
+        <div class="section-block">
+            <h2>Perguntas Frequentes</h2>
             
-            <a href="https://play.google.com/store/apps/details?id=com.verbumxpress.shama" class="btn-shama btn-play" target="_blank" rel="noopener noreferrer">
-                <span class="btn-icone">🔗</span> Play Store
-            </a>
+            <details>
+                <summary>O Shama precisa de internet para funcionar?</summary>
+                <div class="faq-content">
+                    A maior parte do aplicativo, incluindo seus históricos de leitura, planos e marcações, funciona totalmente offline. A conexão com a internet é necessária apenas para carregar os devocionais do dia e sincronizar seu progresso na nuvem.
+                </div>
+            </details>
+
+            <details>
+                <summary>Haverá versão para iPhone (iOS)?</summary>
+                <div class="faq-content">
+                    Sim! O aplicativo já foi validado para o ecossistema da Apple e estará disponível na App Store em breve. Enquanto isso, usuários de iPhone podem utilizar a versão web com as mesmas funcionalidades.
+                </div>
+            </details>
+
+            <details>
+                <summary>Como funcionam as Ligas e os Grupos?</summary>
+                <div class="faq-content">
+                    Estamos desenvolvendo uma funcionalidade onde líderes e pastores poderão criar "Ligas" exclusivas. Nelas, você receberá devocionais direcionados e poderá participar de rankings de constância junto com sua comunidade local.
+                </div>
+            </details>
         </div>
-        </div>
+
+        <!-- SEÇÕES ORIGINAIS MANTIDAS -->
         <div class="section-block">
-            <h2>Sobre o App</h2>
-            <p>O <strong>Shama</strong> é o seu companheiro diário de fé. Projetado para manter a chama acesa através da leitura bíblica, devocionais e gamificação cristã. Nosso objetivo é transformar o hábito de leitura da Bíblia em algo dinâmico e constante.</p>
+            <h2>Colabore com Devocionais</h2>
+            <p>Acreditamos no poder da comunidade. Se você escreve devocionais e deseja compartilhar suas reflexões para abençoar os usuários do Shama, nós abrimos este espaço para você!</p>
+            <p>Ao enviar o seu texto, <strong>você mantém todos os direitos autorais sobre a sua obra</strong>. Nós apenas garantimos a exibição no aplicativo, com os devidos créditos ao autor, ajudando a espalhar a mensagem para ainda mais pessoas.</p>
+            <p>Tem interesse? Envie seus textos ou entre em contato pelo nosso e-mail abaixo para alinharmos os detalhes.</p>
         </div>
         
         <div class="section-block">
             <h2>Apoie o Projeto</h2>
-            <p>O Shama é desenvolvido de forma independente e disponibilizado gratuitamente. Se este aplicativo tem abençoado sua vida, considere fazer uma oferta voluntária para ajudar nos custos de servidor e desenvolvimento.</p>
+            <p>Sendo um aplicativo totalmente gratuito e sem fins lucrativos, o Shama depende de apoio independente para cobrir os custos de servidores, licenças de desenvolvimento e manutenção das lojas de aplicativos.</p>
+            <p>Se este aplicativo tem abençoado sua vida, considere fazer uma oferta voluntária. Qualquer valor nos ajuda a continuar operando e trazendo melhorias.</p>
             
             <div class="tip-box">
                 <span style="margin-right: 10px; font-size: 1.2rem;">💡</span>
@@ -235,6 +127,17 @@
                 <span class="pix-key">jjcompest@gmail.com</span>
                 <p style="margin: 5px 0 0 0; color: #777;"><small>(Confirme o banco antes de enviar)</small></p>
             </div>
+        </div>
+
+        <div class="section-block">
+            <h2>Agradecimentos</h2>
+            <p>A construção do Shama não seria possível sem o apoio, as orações e o incentivo de pessoas fundamentais, amigos, pastores e líderes da comunidade.</p>
+            <!-- <ul class="agradecimentos-lista">
+                <li>[Nome da Pessoa 1]</li>
+                <li>[Nome da Pessoa 2]</li>
+                <li>[Nome da Pessoa 3]</li>
+                <li>[Nome da Pessoa 4]</li>
+            </ul> -->
         </div>
 
         <div class="section-block">

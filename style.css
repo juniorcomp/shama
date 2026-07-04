@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --primary: #4A148C; 
+    --primary-light: #7c43bd;
+    --accent: #FFC107;  
+    --bg-page: #f8f9fa; 
+    --card-bg: #ffffff; 
+    --text-main: #1c1c1e; 
+    --text-sec: #636366; 
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: var(--bg-page);
+}
+
+/* NOVO HEADER: Estilo Hero Premium */
+header {
+    background: linear-gradient(135deg, var(--primary) 0%, #2a0854 100%);
+    color: white;
+    padding: 5rem 1rem 6rem 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: var(--bg-page);
+}
+
+.logo-header {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+header h1 { 
+    margin: 0; 
+    font-size: 3.5rem; 
+    font-weight: 700; 
+    letter-spacing: -1px; 
+    text-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+header p { 
+    font-size: 1.2rem; 
+    opacity: 0.9; 
+    margin-top: 10px; 
+    color: rgba(255,255,255,0.8); 
+}
+
+/* Espaço para o Mockup do Celular */
+.hero-mockup {
+    margin-top: 30px;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-mockup img {
+    max-width: 250px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    border: 6px solid #1c1c1e; /* Simula a borda de um celular escuro */
+}
+
+.container {
+    max-width: 900px;
+    margin: -20px auto 2rem;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+.section-block {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    margin-bottom: 25px;
+    border-radius: 16px; /* Mais arredondado, estilo iOS */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+h2 { 
+    color: var(--primary); 
+    margin-top: 0; 
+    font-size: 1.8rem;
+    border-bottom: 2px solid #f0f0f0; 
+    padding-bottom: 15px; 
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* NOVO: Grid de Funcionalidades */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.feature-card {
+    background: var(--bg-page);
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.feature-card h3 {
+    color: var(--primary);
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    letter-spacing: 0;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    margin: 0;
+    color: var(--text-sec);
+}
+
+/* O resto do CSS original segue aqui... (Botões, Caixa de Doação, etc) */
+/* Caixa de Doação - Estilo "Alerta" */
+.donation-box { background: #fff8e1; border-left: 4px solid var(--accent); padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem; }
+.pix-key { font-family: monospace; font-size: 1.2rem; font-weight: bold; color: var(--primary); background: rgba(255,255,255,0.5); padding: 8px 12px; border-radius: 4px; display: inline-block; margin: 10px 0; border: 1px dashed #ccc; }
+.tip-box { background-color: #e3f2fd; color: #0d47a1; padding: 12px; border-radius: 8px; font-size: 0.9rem; margin-bottom: 15px; display: flex; align-items: center; }
+
+/* Estilo das Políticas e FAQ */
+details { background: #fff; border: 1px solid #eee; border-radius: 8px; margin-bottom: 15px; overflow: hidden; transition: all 0.3s ease; }
+summary { background: #fafafa; padding: 18px 20px; cursor: pointer; font-weight: 600; color: #333; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+summary:hover { background: #f5f5f7; }
+summary::after { content: '+'; font-size: 1.4rem; color: var(--primary); font-weight: 400; transition: transform 0.3s ease; }
+details[open] summary::after { transform: rotate(45deg); }
+details[open] summary { border-bottom: 1px solid #eee; color: var(--primary); }
+.policy-content { padding: 20px; font-size: 0.95rem; color: #555; max-height: 400px; overflow-y: auto; line-height: 1.7; }
+.faq-content { padding: 20px; font-size: 0.95rem; color: #555; background: #fff; }
+
+a { color: var(--primary); text-decoration: none; font-weight: 600; }
+a:hover { text-decoration: underline; }
+footer { text-align: center; padding: 3rem 1rem; color: var(--text-sec); font-size: 0.85rem; }
+.botoes-shama { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
+.btn-shama { display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; border-radius: 12px; font-size: 16px; font-weight: 600; text-decoration: none; color: white; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
+.btn-shama:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+.btn-web { background-color: var(--primary); }
+.btn-play { background-color: #000000; }
+.btn-icone { margin-right: 8px; font-size: 22px; }
+.agradecimentos-lista { list-style-type: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.agradecimentos-lista li { background: #f0f0f0; padding: 8px 18px; border-radius: 20px; font-size: 0.95rem; color: #333; font-weight: 500; }

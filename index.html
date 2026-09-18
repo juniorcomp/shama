@@ -1,170 +1,292 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shama App - Verbumxpress</title>
     <!-- Ligação com o arquivo CSS separado -->
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Metatags Básicas de SEO e Compartilhamento (WhatsApp, Instagram, etc) -->
     <meta property="og:title" content="Shama App - O seu companheiro diário de fé">
-    <meta property="og:description" content="Mantenha a chama acesa através da leitura bíblica estruturada, devocionais reflexivos e gamificação cristã. Baixe agora!">
+    <meta property="og:description"
+        content="Mantenha a chama acesa através da leitura bíblica estruturada, devocionais reflexivos e gamificação cristã. Baixe agora!">
     <meta property="og:type" content="website">
     <!-- Substitua o link abaixo pela URL real da imagem do logo do Shama quando tiver -->
     <!-- <meta property="og:image" content="https://seusite.com/logo-shama.png"> -->
 </head>
+
 <body>
 
     <header>
-        <img src="logo_shama_transparent.png" alt="Logo Shama" class="logo-header">
-        <h1>SHAMA</h1>
+        <img src="../assets/Logotipo_de_Chama_Dourada_Abstrata-removebg-preview.png" alt="Logo Shama Dourada"
+            class="logo-header">
+        <h1>SHAMA BIBLE</h1>
         <p>Desenvolvido por <strong>Verbumxpress</strong></p>
-        
+
         <!-- Botões de acesso rápido no topo -->
         <div class="botoes-shama">
-            <a href="https://shamabible-afa9a.web.app" class="btn-shama btn-web" target="_blank" rel="noopener noreferrer">
-                <span class="btn-icone">🌐</span> Acessar Web
+            <a href="https://play.google.com/store/apps/details?id=com.verbumxpress.shama" class="btn-shama btn-play"
+                target="_blank" rel="noopener noreferrer">
+                <svg class="btn-icone" viewBox="0 0 512 512" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor"
+                        d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
+                </svg>
+                Google Play
             </a>
-            <a href="https://play.google.com/store/apps/details?id=com.verbumxpress.shama" class="btn-shama btn-play" target="_blank" rel="noopener noreferrer">
-                <span class="btn-icone">🔗</span> Google Play
+
+            <a href="#" class="btn-shama btn-apple" target="_blank" rel="noopener noreferrer">
+                <svg class="btn-icone" viewBox="0 0 384 512" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor"
+                        d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
+                </svg>
+                App Store
+            </a>
+
+            <a href="https://shamabible-afa9a.web.app" class="btn-shama btn-web" target="_blank"
+                rel="noopener noreferrer">
+                <svg class="btn-icone" viewBox="0 0 512 512" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor"
+                        d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64h185.4c2.2 20.4 3.3 41.8 3.3 64zm28.8-64h123.1c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26.1 20.9 58.3 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192h123.1c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM190.6 503.6c-78.3-20.7-142-77.5-171.9-151.6h116.6c10 63.9 29.8 117.4 55.3 151.6zm143.5 0c25.5-34.2 45.3-87.7 55.3-151.6h116.6c-29.9 74.1-93.6 130.9-171.9 151.6zM256 512c-7.3 0-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5c-11.6-26.1-20.9-58.3-27-94.7h176.6c-6.1 36.4-15.5 68.6-27 94.7c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512z" />
+                </svg>
+                Acessar Web
             </a>
         </div>
 
-        <!-- Espaço para o Print do App -->
-        <div class="hero-mockup">
-            <!-- DICA: Salve um print bonito do app como app-mockup.png na pasta do site e descomente a linha abaixo -->
-            <!-- <img src="app-mockup.png" alt="Tela do aplicativo Shama"> -->
+        <!-- Espaço para os Prints do App (Estilo CSS Premium 3D Triplo) -->
+        <div class="mockups-wrapper">
+            <!-- Celular 1 (Esquerda) -->
+            <div class="phone-mockup phone-1">
+                <div class="phone-screen" style="background-image: url('../assets/1242%20×%202688px.png'); padding: 0;">
+                </div>
+            </div>
+
+            <!-- Celular 2 (Centro/Destaque) -->
+            <div class="phone-mockup phone-2">
+                <div class="phone-screen"
+                    style="background-image: url('../assets/Captura%20de%20tela_8-9-2026_134122_localhost.jpeg'); padding: 0;">
+                </div>
+            </div>
+
+            <!-- Celular 3 (Direita) -->
+            <div class="phone-mockup phone-3">
+                <div class="phone-screen"
+                    style="background-image: url('../assets/WhatsApp%20Image%202026-09-08%20at%2012.49.07%20(2).jpeg'); padding: 0;">
+                </div>
+            </div>
         </div>
     </header>
 
     <div class="container">
-        
-        <!-- SEÇÃO ORIGINAL MANTIDA -->
-        <div class="section-block">
-            <h2>Sobre o App e Funcionamento</h2>
-            <p>O <strong>Shama</strong> é o seu companheiro diário de fé. Projetado para ajudar você a manter a chama acesa através da leitura bíblica estruturada e devocionais reflexivos.</p>
-            <p><strong>Como funciona:</strong> O aplicativo oferece um calendário inteligente para rastrear o seu progresso diário, permitindo recuperar leituras passadas e registrar metas futuras. Através de um sistema de gamificação cristã, incentivamos a constância, tornando o hábito de leitura da Bíblia mais dinâmico e engajador.</p>
-            <p><strong>Propósito:</strong> É importante destacar que o Shama é um projeto <strong>100% sem fins lucrativos</strong>. Nossa missão exclusiva é fornecer ferramentas tecnológicas de alta qualidade para edificação espiritual, o avanço do Reino e o crescimento na Palavra.</p>
+
+        <!-- FRASE DE IMPACTO -->
+        <div class="impact-phrase reveal">
+            <h2>Transforme o seu tempo com Deus em um hábito inabalável.</h2>
+            <p>Descubra uma nova forma de ler, meditar e viver a Palavra através da constância diária.</p>
         </div>
 
-        <!-- GRID VISUAL DE DESTAQUE -->
-        <div class="section-block">
+        <!-- SEÇÃO ORIGINAL MANTIDA -->
+        <div class="section-block reveal">
+            <h2>Sobre o App e Funcionamento</h2>
+            <p>O <strong>Shama</strong> é o seu companheiro diário de fé. Projetado para ajudar você a manter a chama
+                acesa através da leitura bíblica estruturada e devocionais reflexivos.</p>
+            <p><strong>Como funciona:</strong> O aplicativo oferece um calendário inteligente para rastrear o seu
+                progresso diário, permitindo recuperar leituras passadas e registrar metas futuras. Através de um
+                sistema de gamificação cristã, incentivamos a constância, tornando o hábito de leitura da Bíblia mais
+                dinâmico e engajador.</p>
+            <p><strong>Propósito:</strong> É importante destacar que o Shama é um <strong>projeto comunitário e não
+                    comercial</strong>. Nossa missão exclusiva é fornecer ferramentas tecnológicas de alta qualidade
+                para edificação espiritual, o avanço do Reino e o crescimento na Palavra.</p>
+        </div>
+
+        <!-- CARROSSEL DE DESTAQUE -->
+        <div class="section-block reveal">
             <h2>Principais Funcionalidades</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📖</div>
-                    <h3>Leitura Ágil</h3>
-                    <p>Marque capítulos lidos instantaneamente com um toque longo. Acompanhe seu progresso sem burocracia.</p>
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    <!-- Grupo 1 -->
+                    <div class="marquee-content">
+                        <div class="marquee-item">
+                            <h3>Devocionais</h3>
+                            <p>Reflexões diárias e automáticas para inspirar o seu dia. Conteúdo novo e focado sempre à meia-noite.</p>
+                        </div>
+                        <div class="marquee-item">
+                            <h3>Gamificação</h3>
+                            <p>Mantenha a chama acesa! Acompanhe seu histórico e construa constância de forma dinâmica.</p>
+                        </div>
+                        <div class="marquee-item">
+                            <h3>Planos Personalizados</h3>
+                            <p>Crie planos de leitura flexíveis adaptados ao seu ritmo e rotina.</p>
+                        </div>
+                        <div class="marquee-item">
+                            <h3>Leitura Ágil</h3>
+                            <p>Marque capítulos lidos instantaneamente com um toque longo.</p>
+                        </div>
+                        <div class="marquee-item">
+                            <h3>Apontando para Cristo</h3>
+                            <p>Estudos expositivos conectando a Escritura à graça de Deus e à obra de Jesus.</p>
+                        </div>
+                        <div class="marquee-item">
+                            <h3>Modos Premium</h3>
+                            <p>Explore nossos 4 temas exclusivos com dark mode imersivo.</p>
+                        </div>
+                        <div class="marquee-item">
+                            <h3>Contexto</h3>
+                            <p>Pano de fundo histórico e cultural das passagens.</p>
+                        </div>
+                        <div class="marquee-item">
+                            <h3>Referência Cruzada</h3>
+                            <p>Descubra conexões rápidas entre o Antigo e o Novo Testamento.</p>
+                        </div>
+                        <div class="marquee-item">
+                            <h3>Curiosidades Diárias</h3>
+                            <p>Fatos históricos todos os dias para enriquecer o conhecimento bíblico.</p>
+                        </div>
+                        <div class="marquee-item">
+                            <h3>Louvores</h3>
+                            <p>Sugestões conectadas a versículos específicos para guiar sua adoração.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Grupo 2 (Duplicado para o efeito infinito) -->
+                    <div class="marquee-content" aria-hidden="true">
+                        <div class="marquee-item">
+                            <h3>Devocionais</h3>
+                            <p>Reflexões diárias e automáticas para inspirar o seu dia. Conteúdo novo e focado sempre à meia-noite.</p>
+                        </div>
+                        <div class="marquee-item">
+                            <h3>Gamificação</h3>
+                            <p>Mantenha a chama acesa! Acompanhe seu histórico e construa constância de forma dinâmica.</p>
+                        </div>
+                        <div class="marquee-item">
+                            <h3>Planos Personalizados</h3>
+                            <p>Crie planos de leitura flexíveis adaptados ao seu ritmo e rotina.</p>
+                        </div>
+                        <div class="marquee-item">
+                            <h3>Leitura Ágil</h3>
+                            <p>Marque capítulos lidos instantaneamente com um toque longo.</p>
+                        </div>
+                        <div class="marquee-item">
+                            <h3>Apontando para Cristo</h3>
+                            <p>Estudos expositivos conectando a Escritura à graça de Deus e à obra de Jesus.</p>
+                        </div>
+                        <div class="marquee-item">
+                            <h3>Modos Premium</h3>
+                            <p>Explore nossos 4 temas exclusivos com dark mode imersivo.</p>
+                        </div>
+                        <div class="marquee-item">
+                            <h3>Contexto</h3>
+                            <p>Pano de fundo histórico e cultural das passagens.</p>
+                        </div>
+                        <div class="marquee-item">
+                            <h3>Referência Cruzada</h3>
+                            <p>Descubra conexões rápidas entre o Antigo e o Novo Testamento.</p>
+                        </div>
+                        <div class="marquee-item">
+                            <h3>Curiosidades Diárias</h3>
+                            <p>Fatos históricos todos os dias para enriquecer o conhecimento bíblico.</p>
+                        </div>
+                        <div class="marquee-item">
+                            <h3>Louvores</h3>
+                            <p>Sugestões conectadas a versículos específicos para guiar sua adoração.</p>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🏆</div>
-                    <h3>Gamificação</h3>
-                    <p>Mantenha a chama acesa! Acompanhe seu histórico no calendário inteligente e construa constância.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔥</div>
-                    <h3>Devocionais</h3>
-                    <p>Reflexões diárias e automáticas para inspirar o seu dia. Conteúdo novo sempre à meia-noite.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Modos Premium</h3>
-                    <p>Ajuste o visual ao seu gosto. Explore nossos 4 temas exclusivos com tons claros e dark mode imersivo.</p>
-                </div>
-            </div>
         </div>
 
         <!-- PERGUNTAS FREQUENTES -->
-        <div class="section-block">
+        <div class="section-block reveal">
             <h2>Perguntas Frequentes</h2>
-            
+
             <details>
                 <summary>O Shama precisa de internet para funcionar?</summary>
                 <div class="faq-content">
-                    A maior parte do aplicativo, incluindo seus históricos de leitura, planos e marcações, funciona totalmente offline. A conexão com a internet é necessária apenas para carregar os devocionais do dia e sincronizar seu progresso na nuvem.
+                    A maior parte do aplicativo, incluindo seus históricos de leitura, planos e marcações, funciona
+                    totalmente offline. A conexão com a internet é necessária apenas para carregar os devocionais do dia
+                    e sincronizar seu progresso na nuvem.
                 </div>
             </details>
 
             <details>
                 <summary>Haverá versão para iPhone (iOS)?</summary>
                 <div class="faq-content">
-                    Sim! O aplicativo já foi validado para o ecossistema da Apple e estará disponível na App Store em breve. Enquanto isso, usuários de iPhone podem utilizar a versão web com as mesmas funcionalidades.
+                    Sim! O aplicativo já foi validado para o ecossistema da Apple e estará disponível na App Store em
+                    breve. Enquanto isso, usuários de iPhone podem utilizar a versão web com as mesmas funcionalidades.
                 </div>
             </details>
 
             <details>
                 <summary>Como funcionam as Ligas e os Grupos?</summary>
                 <div class="faq-content">
-                    Estamos desenvolvendo uma funcionalidade onde líderes e pastores poderão criar "Ligas" exclusivas. Nelas, você receberá devocionais direcionados e poderá participar de rankings de constância junto com sua comunidade local.
+                    Estamos desenvolvendo uma funcionalidade onde líderes e pastores poderão criar "Ligas" exclusivas.
+                    Nelas, você receberá devocionais direcionados e poderá participar de rankings de constância junto
+                    com sua comunidade local.
                 </div>
             </details>
         </div>
 
         <!-- SEÇÕES ORIGINAIS MANTIDAS -->
-        <div class="section-block">
+        <div class="section-block reveal">
             <h2>Colabore com Devocionais</h2>
-            <p>Acreditamos no poder da comunidade. Se você escreve devocionais e deseja compartilhar suas reflexões para abençoar os usuários do Shama, nós abrimos este espaço para você!</p>
-            <p>Ao enviar o seu texto, <strong>você mantém todos os direitos autorais sobre a sua obra</strong>. Nós apenas garantimos a exibição no aplicativo, com os devidos créditos ao autor, ajudando a espalhar a mensagem para ainda mais pessoas.</p>
-            <p>Tem interesse? Envie seus textos ou entre em contato pelo nosso e-mail abaixo para alinharmos os detalhes.</p>
+            <p>Acreditamos no poder da comunidade. Se você escreve devocionais e deseja compartilhar suas reflexões para
+                abençoar os usuários do Shama, nós abrimos este espaço para você!</p>
+            <p>Ao enviar o seu texto, <strong>você mantém todos os direitos autorais sobre a sua obra</strong>. Nós
+                apenas garantimos a exibição no aplicativo, com os devidos créditos ao autor, ajudando a espalhar a
+                mensagem para ainda mais pessoas.</p>
+            <p>Tem interesse? Envie seus textos ou entre em contato pelo nosso e-mail abaixo para alinharmos os
+                detalhes.</p>
         </div>
-        
-        <div class="section-block">
+
+        <div class="section-block reveal">
             <h2>Apoie o Projeto</h2>
-            <p>Sendo um aplicativo totalmente gratuito e sem fins lucrativos, o Shama depende de apoio independente para cobrir os custos de servidores, licenças de desenvolvimento e manutenção das lojas de aplicativos.</p>
-            <p>Se este aplicativo tem abençoado sua vida, considere fazer uma oferta voluntária. Qualquer valor nos ajuda a continuar operando e trazendo melhorias.</p>
-            
-            <div class="tip-box">
-                <span style="margin-right: 10px; font-size: 1.2rem;">💡</span>
-                <span><strong>Dica:</strong> Para identificarmos sua doação, se possível, faça o PIX com o final <strong>,33</strong> (centavos).</span>
-            </div>
-            
-            <div class="donation-box">
-                <span style="color: #666; font-size: 0.9rem;">Chave PIX (E-mail ou CPF):</span><br>
-                <span class="pix-key">jjcompest@gmail.com</span>
-                <p style="margin: 5px 0 0 0; color: #777;"><small>(Confirme o banco antes de enviar)</small></p>
-            </div>
+            <p>Sendo um projeto comunitário, gratuito e não comercial, o Shama depende de apoio independente para
+                cobrir os custos de servidores, licenças de desenvolvimento e manutenção das lojas de aplicativos.</p>
+            <p>Se este aplicativo tem abençoado sua vida, considere apoiar e compartilhar com outras pessoas. Juntos
+                podemos continuar operando e trazendo melhorias contínuas para o Reino.</p>
         </div>
 
-        <div class="section-block">
+        <div class="section-block reveal">
             <h2>Agradecimentos</h2>
-            <p>A construção do Shama não seria possível sem o apoio, as orações e o incentivo de pessoas fundamentais, amigos, pastores e líderes da comunidade.</p>
-            <!-- <ul class="agradecimentos-lista">
-                <li>[Nome da Pessoa 1]</li>
-                <li>[Nome da Pessoa 2]</li>
-                <li>[Nome da Pessoa 3]</li>
-                <li>[Nome da Pessoa 4]</li>
-            </ul> -->
+            <p>A construção do Shama não seria possível sem o apoio, as orações e o incentivo de pessoas fundamentais,
+                amigos, pastores e líderes da comunidade.</p>
+            <ul class="agradecimentos-lista" style="margin-top: 20px;">
+                <li><strong>Yago Melo:</strong> Pelo apoio fundamental com os devocionais.</li>
+                <li><strong>Isabela Avila:</strong> Pela permissão do uso das maravilhosas curiosidades diárias.</li>
+            </ul>
         </div>
 
-        <div class="section-block">
+        <div class="section-block reveal">
             <h2>Políticas e Termos</h2>
-            <p style="font-size: 0.95rem; color: #666;">Para transparência total, disponibilizamos nossa Política de Privacidade e Termos de Uso em Português e Inglês.</p>
+            <p style="font-size: 0.95rem; color: #666;">Para transparência total, disponibilizamos nossa Política de
+                Privacidade e Termos de Uso em Português e Inglês.</p>
 
             <h3>Política de Privacidade</h3>
-            
+
             <details open>
                 <summary>🇧🇷 Política de Privacidade (Português)</summary>
                 <div class="policy-content">
                     <strong>Política de Privacidade</strong>
-                    <p>Esta política de privacidade aplica-se ao aplicativo Shama (doravante referido como "Aplicativo") para dispositivos móveis, criado por Verbumxpress (doravante referido como "Provedor de Serviço") como um serviço Gratuito.</p>
-                    
+                    <p>Esta política de privacidade aplica-se ao aplicativo Shama (doravante referido como "Aplicativo")
+                        para dispositivos móveis, criado por Verbumxpress (doravante referido como "Provedor de
+                        Serviço") como um serviço Gratuito.</p>
+
                     <strong>Coleta e Uso de Informações</strong>
-                    <p>O Aplicativo coleta informações quando você o baixa e utiliza. Essas informações podem incluir dados como:</p>
+                    <p>O Aplicativo coleta informações quando você o baixa e utiliza. Essas informações podem incluir
+                        dados como:</p>
                     <ul>
                         <li>Endereço de Protocolo de Internet do seu dispositivo (ex: endereço IP)</li>
                         <li>As páginas do Aplicativo que você visita, a hora e data da visita</li>
                         <li>O sistema operacional que você usa no seu dispositivo móvel</li>
                     </ul>
                     <p>O Aplicativo não coleta informações precisas sobre a localização do seu dispositivo móvel.</p>
-                    
+
                     <strong>Acesso de Terceiros</strong>
-                    <p>O Aplicativo utiliza serviços de terceiros que possuem suas próprias Políticas de Privacidade:</p>
+                    <p>O Aplicativo utiliza serviços de terceiros que possuem suas próprias Políticas de Privacidade:
+                    </p>
                     <ul>
-                        <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
+                        <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a>
+                        </li>
                     </ul>
 
                     <strong>Contato</strong>
@@ -175,7 +297,32 @@
             <details>
                 <summary>🇺🇸 Privacy Policy (English - Original)</summary>
                 <div class="policy-content">
-                    <strong>Privacy Policy</strong><p>This privacy policy applies to the Shama app (hereby referred to as "Application") for mobile devices that was created by Verbumxpress (hereby referred to as "Service Provider") as a Free service. This service is intended for use "AS IS".</p><br><strong>Information Collection and Use</strong><p>The Application collects information when you download and use it. This information may include information such as </p><ul><li>Your device's Internet Protocol address (e.g. IP address)</li><li>The pages of the Application that you visit, the time and date of your visit, the time spent on those pages</li><li>The time spent on the Application</li><li>The operating system you use on your mobile device</li></ul><p></p><br><p>The Application does not gather precise information about the location of your mobile device.</p><br><p>Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:</p><ul><li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Google Play Services</a></li></ul><br><strong>Contact Us</strong><p>If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at verbumxpressart@gmail.com.</p>
+                    <strong>Privacy Policy</strong>
+                    <p>This privacy policy applies to the Shama app (hereby referred to as "Application") for mobile
+                        devices that was created by Verbumxpress (hereby referred to as "Service Provider") as a Free
+                        service. This service is intended for use "AS IS".</p><br><strong>Information Collection and
+                        Use</strong>
+                    <p>The Application collects information when you download and use it. This information may include
+                        information such as </p>
+                    <ul>
+                        <li>Your device's Internet Protocol address (e.g. IP address)</li>
+                        <li>The pages of the Application that you visit, the time and date of your visit, the time spent
+                            on those pages</li>
+                        <li>The time spent on the Application</li>
+                        <li>The operating system you use on your mobile device</li>
+                    </ul>
+                    <p></p><br>
+                    <p>The Application does not gather precise information about the location of your mobile device.</p>
+                    <br>
+                    <p>Please note that the Application utilizes third-party services that have their own Privacy Policy
+                        about handling data. Below are the links to the Privacy Policy of the third-party service
+                        providers used by the Application:</p>
+                    <ul>
+                        <li><a href="https://www.google.com/policies/privacy/" target="_blank"
+                                rel="noopener noreferrer">Google Play Services</a></li>
+                    </ul><br><strong>Contact Us</strong>
+                    <p>If you have any questions regarding privacy while using the Application, or have questions about
+                        the practices, please contact the Service Provider via email at verbumxpressart@gmail.com.</p>
                 </div>
             </details>
 
@@ -185,22 +332,35 @@
                 <summary>🇧🇷 Termos e Condições (Português)</summary>
                 <div class="policy-content">
                     <strong>Termos e Condições</strong>
-                    <p>Estes termos e condições aplicam-se ao aplicativo Shama (doravante referido como "Aplicativo") para dispositivos móveis, criado por Verbumxpress (doravante referido como "Provedor de Serviço") como um serviço Gratuito.</p>
-                    
-                    <p>Ao baixar ou utilizar o Aplicativo, você concorda automaticamente com os seguintes termos. É altamente recomendável que você leia e entenda esses termos antes de usar o Aplicativo.</p>
-                    
+                    <p>Estes termos e condições aplicam-se ao aplicativo Shama (doravante referido como "Aplicativo")
+                        para dispositivos móveis, criado por Verbumxpress (doravante referido como "Provedor de
+                        Serviço") como um serviço Gratuito.</p>
+
+                    <p>Ao baixar ou utilizar o Aplicativo, você concorda automaticamente com os seguintes termos. É
+                        altamente recomendável que você leia e entenda esses termos antes de usar o Aplicativo.</p>
+
                     <strong>Propriedade Intelectual</strong>
-                    <p>A cópia não autorizada, modificação do Aplicativo, de qualquer parte do Aplicativo ou de nossas marcas registradas é estritamente proibida. Tentativas de extrair o código-fonte, traduzir o Aplicativo ou criar versões derivadas não são permitidas. Todas as marcas registradas e direitos autorais permanecem propriedade do Provedor de Serviço.</p>
-                    
+                    <p>A cópia não autorizada, modificação do Aplicativo, de qualquer parte do Aplicativo ou de nossas
+                        marcas registradas é estritamente proibida. Tentativas de extrair o código-fonte, traduzir o
+                        Aplicativo ou criar versões derivadas não são permitidas. Todas as marcas registradas e direitos
+                        autorais permanecem propriedade do Provedor de Serviço.</p>
+
                     <strong>Segurança e Uso</strong>
-                    <p>É sua responsabilidade manter a segurança do seu telefone e o acesso ao Aplicativo. O Provedor de Serviço aconselha fortemente contra o "jailbreak" ou "root" do seu telefone, o que pode expor seu dispositivo a malwares e comprometer a segurança, podendo fazer com que o Aplicativo não funcione corretamente.</p>
-                    
+                    <p>É sua responsabilidade manter a segurança do seu telefone e o acesso ao Aplicativo. O Provedor de
+                        Serviço aconselha fortemente contra o "jailbreak" ou "root" do seu telefone, o que pode expor
+                        seu dispositivo a malwares e comprometer a segurança, podendo fazer com que o Aplicativo não
+                        funcione corretamente.</p>
+
                     <strong>Conectividade</strong>
-                    <p>Algumas funções do Aplicativo requerem uma conexão ativa com a internet. O Provedor de Serviço não pode ser responsabilizado se o Aplicativo não funcionar com capacidade total devido à falta de acesso Wi-Fi ou se você esgotar sua franquia de dados.</p>
-                    
+                    <p>Algumas funções do Aplicativo requerem uma conexão ativa com a internet. O Provedor de Serviço
+                        não pode ser responsabilizado se o Aplicativo não funcionar com capacidade total devido à falta
+                        de acesso Wi-Fi ou se você esgotar sua franquia de dados.</p>
+
                     <strong>Atualizações</strong>
-                    <p>O Provedor de Serviço pode desejar atualizar o aplicativo em algum momento. Você precisará baixar as atualizações se quiser continuar usando o aplicativo. O Provedor de Serviço também pode encerrar o uso a qualquer momento sem aviso prévio.</p>
-                    
+                    <p>O Provedor de Serviço pode desejar atualizar o aplicativo em algum momento. Você precisará baixar
+                        as atualizações se quiser continuar usando o aplicativo. O Provedor de Serviço também pode
+                        encerrar o uso a qualquer momento sem aviso prévio.</p>
+
                     <p>Estes termos são efetivos a partir de 01-02-2026.</p>
                 </div>
             </details>
@@ -208,12 +368,84 @@
             <details>
                 <summary>🇺🇸 Terms & Conditions (English - Original)</summary>
                 <div class="policy-content">
-                    <strong>Terms &amp; Conditions</strong><br><p>These terms and conditions apply to the Shama app (hereby referred to as "Application") for mobile devices that was created by Verbumxpress (hereby referred to as "Service Provider") as a Free service.</p><br><p>Upon downloading or utilizing the Application, you are automatically agreeing to the following terms. It is strongly advised that you thoroughly read and understand these terms prior to using the Application.</p><br><p>Unauthorized copying, modification of the Application, any part of the Application, or our trademarks is strictly prohibited. Any attempts to extract the source code of the Application, translate the Application into other languages, or create derivative versions are not permitted. All trademarks, copyrights, database rights, and other intellectual property rights related to the Application remain the property of the Service Provider.</p><br><p>The Service Provider is dedicated to ensuring that the Application is as beneficial and efficient as possible. As such, they reserve the right to modify the Application or charge for their services at any time and for any reason. The Service Provider assures you that any charges for the Application or its services will be clearly communicated to you.</p><br><p>The Application stores and processes personal data that you have provided to the Service Provider in order to provide the Service. It is your responsibility to maintain the security of your phone and access to the Application. The Service Provider strongly advise against jailbreaking or rooting your phone, which involves removing software restrictions and limitations imposed by the official operating system of your device. Such actions could expose your phone to malware, viruses, malicious programs, compromise your phone's security features, and may result in the Application not functioning correctly or at all.</p><div><p>Please note that the Application utilizes third-party services that have their own Terms and Conditions. Below are the links to the Terms and Conditions of the third-party service providers used by the Application:</p><ul><li><a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Google Play Services</a></li></ul></div><br><p>Please be aware that the Service Provider does not assume responsibility for certain aspects. Some functions of the Application require an active internet connection, which can be Wi-Fi or provided by your mobile network provider. The Service Provider cannot be held responsible if the Application does not function at full capacity due to lack of access to Wi-Fi or if you have exhausted your data allowance.</p><br><p>If you are using the application outside of a Wi-Fi area, please be aware that your mobile network provider's agreement terms still apply. Consequently, you may incur charges from your mobile provider for data usage during the connection to the application, or other third-party charges. By using the application, you accept responsibility for any such charges, including roaming data charges if you use the application outside of your home territory (i.e., region or country) without disabling data roaming. If you are not the bill payer for the device on which you are using the application, they assume that you have obtained permission from the bill payer.</p><br><p>Similarly, the Service Provider cannot always assume responsibility for your usage of the application. For instance, it is your responsibility to ensure that your device remains charged. If your device runs out of battery and you are unable to access the Service, the Service Provider cannot be held responsible.</p><br><p>In terms of the Service Provider's responsibility for your use of the application, it is important to note that while they strive to ensure that it is updated and accurate at all times, they do rely on third parties to provide information to them so that they can make it available to you. The Service Provider accepts no liability for any loss, direct or indirect, that you experience as a result of relying entirely on this functionality of the application.</p><br><p>The Service Provider may wish to update the application at some point. The application is currently available as per the requirements for the operating system (and for any additional systems they decide to extend the availability of the application to) may change, and you will need to download the updates if you want to continue using the application. The Service Provider does not guarantee that it will always update the application so that it is relevant to you and/or compatible with the particular operating system version installed on your device. However, you agree to always accept updates to the application when offered to you. The Service Provider may also wish to cease providing the application and may terminate its use at any time without providing termination notice to you. Unless they inform you otherwise, upon any termination, (a) the rights and licenses granted to you in these terms will end; (b) you must cease using the application, and (if necessary) delete it from your device.</p><br><strong>Changes to These Terms and Conditions</strong><p>The Service Provider may periodically update their Terms and Conditions. Therefore, you are advised to review this page regularly for any changes. The Service Provider will notify you of any changes by posting the new Terms and Conditions on this page.</p><br><p>These terms and conditions are effective as of 2026-02-01</p><br><strong>Contact Us</strong><p>If you have any questions or suggestions about the Terms and Conditions, please do not hesitate to contact the Service Provider at verbumxpressart@gmail.com.</p>
+                    <strong>Terms &amp; Conditions</strong><br>
+                    <p>These terms and conditions apply to the Shama app (hereby referred to as "Application") for
+                        mobile devices that was created by Verbumxpress (hereby referred to as "Service Provider") as a
+                        Free service.</p><br>
+                    <p>Upon downloading or utilizing the Application, you are automatically agreeing to the following
+                        terms. It is strongly advised that you thoroughly read and understand these terms prior to using
+                        the Application.</p><br>
+                    <p>Unauthorized copying, modification of the Application, any part of the Application, or our
+                        trademarks is strictly prohibited. Any attempts to extract the source code of the Application,
+                        translate the Application into other languages, or create derivative versions are not permitted.
+                        All trademarks, copyrights, database rights, and other intellectual property rights related to
+                        the Application remain the property of the Service Provider.</p><br>
+                    <p>The Service Provider is dedicated to ensuring that the Application is as beneficial and efficient
+                        as possible. As such, they reserve the right to modify the Application or charge for their
+                        services at any time and for any reason. The Service Provider assures you that any charges for
+                        the Application or its services will be clearly communicated to you.</p><br>
+                    <p>The Application stores and processes personal data that you have provided to the Service Provider
+                        in order to provide the Service. It is your responsibility to maintain the security of your
+                        phone and access to the Application. The Service Provider strongly advise against jailbreaking
+                        or rooting your phone, which involves removing software restrictions and limitations imposed by
+                        the official operating system of your device. Such actions could expose your phone to malware,
+                        viruses, malicious programs, compromise your phone's security features, and may result in the
+                        Application not functioning correctly or at all.</p>
+                    <div>
+                        <p>Please note that the Application utilizes third-party services that have their own Terms and
+                            Conditions. Below are the links to the Terms and Conditions of the third-party service
+                            providers used by the Application:</p>
+                        <ul>
+                            <li><a href="https://policies.google.com/terms" target="_blank"
+                                    rel="noopener noreferrer">Google Play Services</a></li>
+                        </ul>
+                    </div><br>
+                    <p>Please be aware that the Service Provider does not assume responsibility for certain aspects.
+                        Some functions of the Application require an active internet connection, which can be Wi-Fi or
+                        provided by your mobile network provider. The Service Provider cannot be held responsible if the
+                        Application does not function at full capacity due to lack of access to Wi-Fi or if you have
+                        exhausted your data allowance.</p><br>
+                    <p>If you are using the application outside of a Wi-Fi area, please be aware that your mobile
+                        network provider's agreement terms still apply. Consequently, you may incur charges from your
+                        mobile provider for data usage during the connection to the application, or other third-party
+                        charges. By using the application, you accept responsibility for any such charges, including
+                        roaming data charges if you use the application outside of your home territory (i.e., region or
+                        country) without disabling data roaming. If you are not the bill payer for the device on which
+                        you are using the application, they assume that you have obtained permission from the bill
+                        payer.</p><br>
+                    <p>Similarly, the Service Provider cannot always assume responsibility for your usage of the
+                        application. For instance, it is your responsibility to ensure that your device remains charged.
+                        If your device runs out of battery and you are unable to access the Service, the Service
+                        Provider cannot be held responsible.</p><br>
+                    <p>In terms of the Service Provider's responsibility for your use of the application, it is
+                        important to note that while they strive to ensure that it is updated and accurate at all times,
+                        they do rely on third parties to provide information to them so that they can make it available
+                        to you. The Service Provider accepts no liability for any loss, direct or indirect, that you
+                        experience as a result of relying entirely on this functionality of the application.</p><br>
+                    <p>The Service Provider may wish to update the application at some point. The application is
+                        currently available as per the requirements for the operating system (and for any additional
+                        systems they decide to extend the availability of the application to) may change, and you will
+                        need to download the updates if you want to continue using the application. The Service Provider
+                        does not guarantee that it will always update the application so that it is relevant to you
+                        and/or compatible with the particular operating system version installed on your device.
+                        However, you agree to always accept updates to the application when offered to you. The Service
+                        Provider may also wish to cease providing the application and may terminate its use at any time
+                        without providing termination notice to you. Unless they inform you otherwise, upon any
+                        termination, (a) the rights and licenses granted to you in these terms will end; (b) you must
+                        cease using the application, and (if necessary) delete it from your device.</p>
+                    <br><strong>Changes to These Terms and Conditions</strong>
+                    <p>The Service Provider may periodically update their Terms and Conditions. Therefore, you are
+                        advised to review this page regularly for any changes. The Service Provider will notify you of
+                        any changes by posting the new Terms and Conditions on this page.</p><br>
+                    <p>These terms and conditions are effective as of 2026-02-01</p><br><strong>Contact Us</strong>
+                    <p>If you have any questions or suggestions about the Terms and Conditions, please do not hesitate
+                        to contact the Service Provider at verbumxpressart@gmail.com.</p>
                 </div>
             </details>
         </div>
-        
-        <div class="section-block" style="text-align: center; border: none; background: transparent; box-shadow: none;">
+
+        <div class="section-block reveal"
+            style="text-align: center; border: none; background: transparent; box-shadow: none;">
             <h3>Dúvidas ou Sugestões?</h3>
             <p>Fale conosco: <a href="mailto:verbumxpressart@gmail.com">verbumxpressart@gmail.com</a></p>
         </div>
@@ -224,5 +456,131 @@
         <p>&copy; 2026 Verbumxpress. Todos os direitos reservados.</p>
     </footer>
 
+    <!-- SCRIPT DE ANIMAÇÃO DE ROLAGEM FLUIDA -->
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100; // Quando o elemento aparece
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        // Chama a função uma vez no carregamento para exibir o que já está na tela
+        reveal();
+
+        // Lógica do Marquee Interativo com Efeito 3D (Drag & Scroll)
+        const marqueeWrapper = document.querySelector('.marquee-wrapper');
+        const marqueeTrack = document.querySelector('.marquee-track');
+        const marqueeItems = document.querySelectorAll('.marquee-item');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        let animationId;
+        let isHovered = false;
+        let scrollSpeed = 0.8;
+
+        function update3DEffect() {
+            if (!marqueeWrapper) return;
+            const wrapperRect = marqueeWrapper.getBoundingClientRect();
+            const wrapperCenter = wrapperRect.left + wrapperRect.width / 2;
+
+            marqueeItems.forEach(item => {
+                const itemRect = item.getBoundingClientRect();
+                const itemCenter = itemRect.left + itemRect.width / 2;
+                const dist = itemCenter - wrapperCenter;
+                
+                // Distância máxima para calcular a curva (ajustável)
+                const maxDist = wrapperRect.width / 1.5; 
+                
+                let normalizedDist = dist / maxDist;
+                // Clampa entre -1 e 1
+                normalizedDist = Math.max(-1, Math.min(1, normalizedDist));
+                
+                const scale = 1 - Math.abs(normalizedDist) * 0.25; 
+                const rotateY = normalizedDist * 50; // Graus de rotação
+                const translateZ = Math.abs(normalizedDist) * -200; // Profundidade
+
+                item.style.transform = `perspective(1000px) translateZ(${translateZ}px) rotateY(${rotateY}deg) scale(${scale})`;
+                item.style.opacity = 1 - (Math.abs(normalizedDist) * 0.6);
+            });
+        }
+
+        function autoScroll() {
+            if (!isDown && !isHovered && marqueeWrapper && marqueeTrack) {
+                marqueeWrapper.scrollLeft += scrollSpeed;
+                
+                if (marqueeWrapper.scrollLeft >= marqueeTrack.scrollWidth / 2) {
+                    marqueeWrapper.scrollLeft = 0;
+                } else if (marqueeWrapper.scrollLeft <= 0 && scrollSpeed < 0) {
+                    marqueeWrapper.scrollLeft = marqueeTrack.scrollWidth / 2;
+                }
+            }
+            
+            // Aplica o efeito 3D frame a frame
+            update3DEffect();
+            
+            animationId = requestAnimationFrame(autoScroll);
+        }
+
+        if (marqueeWrapper && marqueeTrack) {
+            autoScroll();
+
+            // Eventos de Mouse para Drag
+            marqueeWrapper.addEventListener('mouseenter', () => isHovered = true);
+            marqueeWrapper.addEventListener('mouseleave', () => {
+                isHovered = false;
+                isDown = false;
+                marqueeWrapper.classList.remove('active');
+            });
+
+            marqueeWrapper.addEventListener('mousedown', (e) => {
+                isDown = true;
+                marqueeWrapper.classList.add('active');
+                startX = e.pageX - marqueeWrapper.offsetLeft;
+                scrollLeft = marqueeWrapper.scrollLeft;
+            });
+
+            marqueeWrapper.addEventListener('mouseup', () => {
+                isDown = false;
+                marqueeWrapper.classList.remove('active');
+            });
+
+            marqueeWrapper.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - marqueeWrapper.offsetLeft;
+                const walk = (x - startX) * 2; 
+                marqueeWrapper.scrollLeft = scrollLeft - walk;
+            });
+            
+            // Suporte para Touch (Mobile)
+            marqueeWrapper.addEventListener('touchstart', (e) => {
+                isHovered = true;
+                isDown = true;
+                startX = e.touches[0].pageX - marqueeWrapper.offsetLeft;
+                scrollLeft = marqueeWrapper.scrollLeft;
+            }, {passive: true});
+            
+            marqueeWrapper.addEventListener('touchend', () => {
+                isHovered = false;
+                isDown = false;
+            });
+            
+            marqueeWrapper.addEventListener('touchmove', (e) => {
+                if (!isDown) return;
+                const x = e.touches[0].pageX - marqueeWrapper.offsetLeft;
+                const walk = (x - startX) * 2;
+                marqueeWrapper.scrollLeft = scrollLeft - walk;
+            }, {passive: true});
+        }
+    </script>
 </body>
+
 </html>
